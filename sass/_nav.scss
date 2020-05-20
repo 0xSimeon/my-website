@@ -1,16 +1,12 @@
 
 
 .nav {
-	padding: 1rem;
+	// height: 10vh;
 	box-shadow: $box-shadow;
 	display: flex; 
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center; 
-	background: linear-gradient(
-		120deg,
-		hsl(211.10000000000002, 100%, 50%) 44%,
-		RGBA(3, 44, 166, 0.8) 29%
-	);
+	background: #5b78c7;
 
 	&__heading {
 		font-family: $font-secondary; 
@@ -21,14 +17,18 @@
 
 	&__list {
 		list-style: none;
+		width: 50%;
+		margin-left: auto; 
+		height: 100%; 
 		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: center;
+		padding: 1rem; 
+
 	}
 	
 	&__item {
 		padding: 1rem;
-		margin: 0 3rem 1rem 3rem;
 	}
 	
 	&__link {
@@ -37,6 +37,7 @@
 		font-weight: 700;
 		font-size: 1.7rem;
 		color: #fff;
+		
 	}
 	
 	&__link:hover {

@@ -20,6 +20,74 @@ Mobile ==> Viewport width <= 500px;
 			margin: 2rem auto;
 		}
 	}
+
+	.nav {
+		
+		position: relative;
+		display: block;
+
+		&__list {
+			position: fixed;
+			flex-direction: column;
+			height: 100vh;
+			width: 100%;
+			background: #5b78c7;
+			flex-direction: column;
+			/* display: none;  */
+			clip-path: circle(100px at 90% -55%);
+			-webkit-clip-path: circle(100px at 90% -55%);
+			transition: all 1s ease-out;
+			pointer-events: none;
+
+			&.open {
+				clip-path: circle(1000px at 90% -15%);
+				-webkit-clip-path: circle(1000px at 90% -15%);
+				pointer-events: all;
+			}
+		}
+
+		&__item:nth-child(1) {
+			transition: all .5s ease 0.2s;
+		}
+	
+		&__item:nth-child(2) {
+			transition: all .5s ease 0.4s;
+		}
+	
+		&__item:nth-child(3) {
+			transition: all .5s ease 0.6s;
+	
+		}
+		&__item:nth-child(4) {
+			transition: all .5s ease 0.8s;
+	
+		}
+	
+		&__item.fade {
+			opacity: 1; 
+		}
+	}
+
+	body.scroll {
+		overflow-y: hidden;
+		transition: all .1s;
+	}
+
+	.line {
+		width: 30px;
+		height: 3px;
+		margin: 5px;
+		background: $white;
+	}
+
+	.hamburger {
+		position: absolute;
+		cursor: pointer;
+		right: 5%;
+		top: 50%;
+		transform: translate(-5%, -50%);
+		z-index: 2;
+	}
 }
 
 // MOBILE DEVICES

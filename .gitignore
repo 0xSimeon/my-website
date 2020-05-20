@@ -1,2 +1,5 @@
 node_modules
 css/styles.prefix.css 
+styles.css
+menu.html
+sass/_menu.scss
