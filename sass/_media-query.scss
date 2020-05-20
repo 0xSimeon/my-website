@@ -1,3 +1,29 @@
+/*
+MEDIA QUERIES  
+Deskop ==> Viewport width > 700px; 
+Tablet ==> Viewport width > 500px - 700px; 
+Mobile ==> Viewport width <= 500px; 
+
+*/
+
+// TABLET DEVICES
+@media only screen and (max-width: 47.75em) {
+	.hero {
+		&__buttons {
+			flex-direction: column;
+			justify-content: center;
+			text-align: center;
+		}
+
+		&__btn {
+			width: 68%;
+			margin: 2rem auto;
+		}
+	}
+}
+
+// MOBILE DEVICES
+
 @media only screen and (max-width: 31.25em) {
 	html {
 		font-size: 50%;
@@ -9,56 +35,42 @@
 			margin: 1rem 0;
 		}
 	}
-	
 
 	.hero {
-
-
 		&__paragraph {
-			width: 100%; 
+			width: 100%;
 		}
 
 		&__buttons {
 			flex-direction: column;
-			justify-content: center; 
-			text-align: center;
+			justify-content: center;
 		}
 
 		&__btn {
-			margin: 2rem auto;
-			width: 70%; 
+			width: 70%;
 		}
 
 		&__image {
 			height: 100%;
 			margin: 2.5rem auto 0 auto;
-			padding: 1rem; 
+			padding: 1rem;
 		}
-	}  
-
-	// .hero__text {
-	// 	flex-basis: unset;
-
-		
-	// }
-	
+	}
 
 	.skills {
 		margin-top: -2rem;
 		&__title {
-			width: 100%; 
+			width: 100%;
 		}
-	
+
 		&__paragraph {
 			width: 100%;
 		}
 
 		&__wave {
-			height: auto; 
+			height: auto;
 		}
 	}
-
-	
 
 	.about__info {
 		width: 100%;

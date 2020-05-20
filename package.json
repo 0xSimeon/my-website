@@ -6,10 +6,11 @@
   "scripts": {
     "watch:sass": "node-sass -w sass/main.scss css/style.css ",
     "devserver": "live-server --browser=firefox",
-		"start": "npm-run-all --parallel devserver watch:sass",
-		"compile:sass": "node-sass sass/main.scss css/styles.comp.css"
- 
-      
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass sass/main.scss css/styles.comp.css",
+		"prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/styles.comp.css -o css/styles.prefix.css",
+		"compress:css": "node-sass css/styles.prefix.css css/style.css --output-style compressed",
+		"build:css": "npm-run-all compile:sass prefix:css compress:css" 
   },
   "repository": {
     "type": "git",
