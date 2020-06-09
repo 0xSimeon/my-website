@@ -1,55 +1,78 @@
-.nav {
-	padding: 1rem;
-	box-shadow: $box-shadow;
-	display: flex; 
-	justify-content: space-between;
-	align-items: center; 
-	background: linear-gradient(
-		120deg,
-		hsl(211.10000000000002, 100%, 50%) 44%,
-		RGBA(3, 44, 166, 0.8) 29%
-	);
+/*
+* ICONS
+*/
 
-	&__heading {
-		font-family: $font-secondary; 
-		font-size: 4rem;
-		font-weight: 700; 
-		color: #fff; 
+/*  CSS for Navbar */
+
+/* WIP: rename according to BEM */
+
+/* todo: change px to rem */
+
+.header {
+	&__container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 1.5rem;
 	}
 
-	&__list {
-		list-style: none;
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
+	&-nav {
+		&__heading {
+			font-family: $font-secondary; 
+			font-size: 4rem;
+			font-weight: 700; 
+			color: $color-primary; 
+		}
+		&__bar {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 10vh;
+		}
+		&__list {
+			display: flex;
+		}
+
+		&__item {
+			padding: 0 1.5rem;
+			list-style: none;
+		}
+
+		&__link {
+			font-size: 2rem;
+			text-decoration: none;
+			color: $gray; 
+		}
+
+		&__active {
+			color: $color-primary; 
+		}
+
+		&__logo {
+			// width: 80px;
+			// position: relative;
+			// z-index: 10;
+		}
 	}
-	
-	&__item {
-		padding: 1rem;
-		margin: 0 3rem 1rem 3rem;
+
+	&__btn {
+		text-decoration: none; 
 	}
-	
-	&__link {
-		font-family: $font-secondary; 
-		text-transform: uppercase; 
-		font-weight: 700;
-		font-size: 1.7rem;
+
+	&__btn-custom {
+		padding: 1rem 3rem;
+		width: 30%;
+		height: 40%;
+		border-radius: .4rem;
+		background: $color-primary;
 		color: #fff;
-	}
-	
-	&__link:hover {
-		color: rgba(0, 0, 0, 0.5);
-	}
 
-
+		&:hover {
+			background: rgba($color-primary, .7);
+		}
+	}
 }
 
-
-
-
-
-
-
+/**Hamburger ICON **/
 
 /*
 * ICONS
@@ -74,9 +97,6 @@
 
 .fa-heart {
 	color: $red;
-	-webkit-animation: pulse .4s  infinite;  
-	animation: pulse .4s   infinite; 
+	-webkit-animation: pulse 0.4s infinite;
+	animation: pulse 0.4s infinite;
 }
-
-
-

@@ -1,19 +1,11 @@
-// const hamburger = document.querySelector('.hamburger');
-// const navList = document.querySelector('.nav__list'); 
-// const links = document.querySelectorAll('.nav__item');
-// const body = document.querySelector('body');
+(() => {const ul = document.querySelector('.header-nav__list');
 
+const hamburger = document.querySelector('.header__hamburger-icon');
 
-
-// hamburger.addEventListener('click', () => {
-//     body.classList.toggle('scroll');
-//     navList.classList.toggle('open'); 
-//     links.forEach(link => {
-//         link.classList.toggle('fade'); 
-//     }) 
-
-// });  
-
+hamburger.addEventListener('click', () => {
+ul.classList.toggle('show');
+hamburger.classList.toggle('show');
+})})()
 
 
 

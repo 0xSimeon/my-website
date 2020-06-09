@@ -8,8 +8,61 @@ Mobile ==> Viewport width <= 500px;
 
 // TABLET DEVICES
 @media only screen and (max-width: 47.75em) {
-	.nav {
-		background: #5b78c7; 
+	.header {
+		&-nav {
+			&__bar {
+				// align-items: unset; 
+			}
+			&__list {
+				display: none;
+			}
+		}
+
+		/*Show */
+
+		& ul.show {
+			position: fixed;
+			background-color: #fff;
+			top: 8vh;
+			left: 0;
+			height: 100vh;
+			width: 100%;
+			margin-top: -8vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		& ul.show li {
+			margin: 1rem 0;
+		}
+
+		/* Hamburger menu */
+		&__hamburger {
+			&-icon {
+				width: 10rem;
+				height: 3rem;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: flex-end;
+				cursor: pointer;
+			}
+			&-line-1,
+			&-line-2,
+			&-line-3 {
+				background-color: $color-primary;
+				width: 3rem;
+				height: 0.2rem;
+				transition: all 0.2s ease-in-out;
+			}
+
+			&-line-1,
+			&-line-2 {
+				margin-bottom: 0.8rem;
+			}
+		}
 	}
 	.hero {
 		&__buttons {
@@ -23,6 +76,19 @@ Mobile ==> Viewport width <= 500px;
 			margin: 2rem auto;
 		}
 	}
+
+	/* Show class to change the state of hambuger icon cross*/
+	.show .header__hamburger-line-1 {
+		transform: translateY(1rem) rotate(135deg);
+	}
+
+	.show .header__hamburger-line-2 {
+		opacity: 0;
+	}
+
+	.show .header__hamburger-line-3 {
+		transform: translateY(-7.6px) rotate(-135deg);
+	}
 }
 
 // MOBILE DEVICES
@@ -30,14 +96,6 @@ Mobile ==> Viewport width <= 500px;
 @media only screen and (max-width: 31.25em) {
 	html {
 		font-size: 50%;
-	}
-
-	.nav {
-		
-		flex-direction: column;
-		&__item {
-			margin: 1rem 0;
-		}
 	}
 
 	.hero {
