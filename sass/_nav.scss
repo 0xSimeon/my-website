@@ -21,6 +21,7 @@
 			font-size: 4rem;
 			font-weight: 700; 
 			color: $color-primary; 
+
 		}
 		&__bar {
 			display: flex;
@@ -50,7 +51,7 @@
 		&__logo {
 			// width: 80px;
 			// position: relative;
-			// z-index: 10;
+			z-index: 10;
 		}
 	}
 
