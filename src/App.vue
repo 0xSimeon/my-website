@@ -1,14 +1,19 @@
 <template>
-  <div id="app" class="bg-red-300 w-full h-screen">
-    <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
+  <div id="app" class="">
+    <app-header></app-header>
+    <app-hero></app-hero>
   </div>
 </template>
 
 <script>
+import Header from './components/Header';
+import Hero from './components/Hero.vue';
 export default {
   name: 'App',
-  components: {}
+  components: {
+    appHeader: Header,
+    appHero: Hero
+  }
 };
 </script>
 
