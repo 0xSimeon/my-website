@@ -45,13 +45,32 @@
     </div>
     <nav class="navigation__nav top-0 left-0 w-full fixed top-0 right-0 z-40">
       <ul class="navigation__list">
-        <li v-for="link in navLinks" :key="link.id" class="navigation__item">
+        <li class="navigation__item">
           <a
-            href="#"
-            class="navigation__link text-3xl font-light uppercase py-4 px-8 mb-4 block font-textFont rounded"
-          >
-            {{ link }}</a
-          >
+            href="#About" class="navigation__link text-3xl font-light uppercase py-4 px-8 mb-4 block font-textFont rounded"
+          >About
+          </a>
+        </li>
+
+        <li class="navigation__item">
+          <a
+            href="#Services" class="navigation__link text-3xl font-light uppercase py-4 px-8 mb-4 block font-textFont rounded"
+          >Services
+          </a>
+        </li>
+
+        <li class="navigation__item">
+          <a
+            href="#Projects" class="navigation__link text-3xl font-light uppercase py-4 px-8 mb-4 block font-textFont rounded"
+          > Projects
+          </a>
+        </li>
+
+        <li class="navigation__item">
+          <a
+            href="#Contact" class="navigation__link text-3xl font-light uppercase py-4 px-8 mb-4 block font-textFont rounded"
+          > Contact
+          </a>
         </li>
       </ul>
     </nav>
