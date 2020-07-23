@@ -31,6 +31,8 @@
       name="navigation menu"
       class="navigation__checkbox hidden"
       id="nav-toggle"
+      v-model="checked"
+      :checked="checked"
     />
     <label
       name="toggle__button"
@@ -43,33 +45,18 @@
     <div class="navigation__background z-30 fixed rounded-full">
       &nbsp;
     </div>
-    <nav class="navigation__nav top-0 left-0 w-full fixed top-0 right-0 z-40">
+    <nav class="navigation__nav left-0 w-full fixed top-0 right-0 z-40">
       <ul class="navigation__list">
-        <li class="navigation__item">
+        <li
+          v-for="(link, index) in navLinks"
+          :key="index"
+          class="navigation__item"
+        >
           <a
-            href="#About" class="navigation__link text-3xl font-light uppercase py-4 px-8 mb-4 block font-textFont rounded"
-          >About
-          </a>
-        </li>
-
-        <li class="navigation__item">
-          <a
-            href="#Services" class="navigation__link text-3xl font-light uppercase py-4 px-8 mb-4 block font-textFont rounded"
-          >Services
-          </a>
-        </li>
-
-        <li class="navigation__item">
-          <a
-            href="#Projects" class="navigation__link text-3xl font-light uppercase py-4 px-8 mb-4 block font-textFont rounded"
-          > Projects
-          </a>
-        </li>
-
-        <li class="navigation__item">
-          <a
-            href="#Contact" class="navigation__link text-3xl font-light uppercase py-4 px-8 mb-4 block font-textFont rounded"
-          > Contact
+            :href="`#${link}`"
+            @click="checked = !checked"
+            class="navigation__link text-3xl font-light uppercase py-4 px-8 mb-4 block font-textFont rounded"
+            >{{ link }}
           </a>
         </li>
       </ul>
@@ -82,21 +69,10 @@ export default {
   data() {
     return {
       navLinks: ['About', 'Services', 'Projects', 'Contact'],
-      num: 0
-      // show: true
+      num: 0,
+      checked: false
     };
   },
-  methods: {
-    // toggleMenu() {
-    //   this.show = !this.show;
-    // }
-  }
-  // beforeCreate() {
-  //   window.onload = () => {
-  //     window.innerWidth < 900 ? (this.show = false) : (this.show = true);
-  //     // console.log(this.show);
-  //   };
-  // }
 };
 </script>
 

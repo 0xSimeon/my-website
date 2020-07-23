@@ -3,7 +3,7 @@
     <a
       href="#"
       :class="[colorBlue ? 'btn--blue' : 'btn--red']"
-      class=" btn inline-block text-white rounded px-4 py-4 sm:text-2xl  font-bold text-center text-2xl font-textFont shadow-xl min-w-button"
+      class=" btn inline-block text-white rounded px-4 py-4 sm:text-xl  font-bold text-center text-2xl font-textFont shadow-xl min-w-button"
     >
       {{ title }}
     </a>

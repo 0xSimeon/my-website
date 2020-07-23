@@ -5,12 +5,13 @@
     >
       <div class="p-3 sm:mb-10">
         <h2
-          class="p-3 font-bold sm:text-4xl text-6xl sm:font-bold font-headingFont  mb-8"
+          class="p-3  sm:text-4xl text-5xl sm:font-bold font-headingFont  mb-8"
         >
-          Hi 👋, I'm Simeon.
+          Hi, 👋 <br>
+          <strong>I'm Simeon</strong>.
         </h2>
-        <p class="p-4 sm:text-2xl text-5xl font-medium font-textFont  mb-8">
-          I am a frontend developer based in Port harcourt, Nigeria.
+        <p class="p-4 sm:text-2xl text-4xl font-medium font-textFont  mb-8">
+          I am a frontend developer based in <strong>Port harcourt, Nigeria</strong>.
         </p>
 
         <div class="flex p-3">
