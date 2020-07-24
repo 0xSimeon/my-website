@@ -1,30 +1,4 @@
 <template>
-  <!-- <nav class="nav">
-    <button
-      id="menuBtn"
-      class="hamburger hidden md:block focus:outline-none absolute cursor-pointer"
-      type="button"
-      @click="toggleMenu"
-    >
-      <span class="hamburger__top-bun"></span>
-      <span class="hamburger__bottom-bun"></span>
-    </button>
-    <div v-if="show">
-      <ul class="nav__list flex sm:p-2 sm:p-2 p-5 mt-3 sm:block">
-        <li
-          v-for="link in navLinks"
-          :key="link.id"
-          class="nav__item ml-4 sm:ml-auto"
-        >
-          <a
-            href="#"
-            class="nav__link font-textFont text-2xl p-4 sm:p-2 no-underline"
-            >{{ link }}</a
-          >
-        </li>
-      </ul>
-    </div>
-  </nav> -->
   <div class="navigation">
     <input
       type="checkbox"
@@ -84,7 +58,6 @@ export default {
     width: 4.5rem;
     top: 2.5rem;
     right: 3.5rem;
-    box-shadow: 0 0.5rem 0.5rem rgba($color-text, 0.8);
   }
 
   &__background {
@@ -110,8 +83,6 @@ export default {
     text-align: center;
   }
 
-  &__item {
-  }
 
   &__link {
     &:link,

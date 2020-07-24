@@ -1,20 +1,19 @@
 <template>
   <div>
     <section
-      class="hero py-16 px-10 sm:flex-wrap sm:flex-col  sm:py-4 sm:px-1 mx-6 sm:mx-1 flex justify-center"
+      class="hero py-16 px-10 sm:flex-wrap sm:flex-col  sm:py-4 sm:px-3 mx-6 sm:mx-0 flex justify-center"
     >
-      <div class="p-3 sm:mb-10">
-        <h2
-          class="p-3  sm:text-4xl text-5xl sm:font-bold font-headingFont  mb-8"
-        >
-          Hi, 👋 <br>
+      <div class="sm:mb-10">
+        <h2 class="sm:text-4xl text-5xl sm:font-bold font-headingFont  mb-8 sm:mb-4">
+          Hi, 👋 <br />
           <strong>I'm Simeon</strong>.
         </h2>
-        <p class="p-4 sm:text-2xl text-4xl font-medium font-textFont  mb-8">
-          I am a frontend developer based in <strong>Port harcourt, Nigeria</strong>.
+        <p class="sm:text-2xl text-4xl font-medium font-textFont  mb-8 sm:mb-4">
+          I am a frontend developer based in
+          <strong>Port harcourt, Nigeria</strong>.
         </p>
 
-        <div class="flex p-3">
+        <div class="flex">
           <app-button title="My Work" colorBlue="true"></app-button>
           <app-button title="Let's talk"></app-button>
         </div>
@@ -64,11 +63,9 @@
           </a>
 
           <!-- <svg v-for="icon in socials" :key="icon.id"> -->
-            <!-- <use :href="`../assets/img/icons/sprite.svg#${icon}`"></use> -->
-            <!-- <use :href="icon"></use>
+          <!-- <use :href="`../assets/img/icons/sprite.svg#${icon}`"></use> -->
+          <!-- <use :href="icon"></use>
           </svg> -->
-
-         
         </div>
       </div>
     </section>
