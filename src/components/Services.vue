@@ -13,7 +13,7 @@
           <h3 class="font-headingFont font-bold sm:text-2xl text-3xl mb-4">
             {{ service.title }}
           </h3>
-          <p class=" text-2xl sm:text-xl font-light font-textFont">
+          <p class=" text-2xl sm:text-lg font-light font-textFont">
             {{ service.description }}
           </p>
         </div>
@@ -54,7 +54,7 @@ export default {
   clip-path: polygon(0 14%, 100% 0%, 100% 99%, 0 91%);
 
   @include respond(tab-port) {
-    clip-path: polygon(0 6%, 100% 0%, 100% 96%, 0 99%);
+    clip-path: polygon(0 3%, 100% 0%, 100% 98%, 0 99%);
   }
 
   &__heading {

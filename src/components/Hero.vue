@@ -4,11 +4,16 @@
       class="hero py-16 px-10 sm:flex-wrap sm:flex-col  sm:py-4 sm:px-3 mx-6 sm:mx-0 flex justify-center"
     >
       <div class="sm:mb-10">
-        <h2 class="sm:text-4xl text-5xl sm:font-bold font-headingFont  mb-8 sm:mb-4">
+        <h2
+          class="sm:text-4xl text-5xl sm:font-bold font-headingFont  mb-8 sm:mb-4"
+        >
           Hi, 👋 <br />
           <strong>I'm Simeon</strong>.
         </h2>
-        <p class="sm:text-2xl text-4xl font-medium font-textFont  mb-8 sm:mb-4">
+        <p
+          class="sm:text-2xl text-4xl font-medium font-textFont  mb-8 
+        "
+        >
           I am a frontend developer based in
           <strong>Port harcourt, Nigeria</strong>.
         </p>
