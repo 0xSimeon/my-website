@@ -24,13 +24,13 @@
         </div>
       </div>
 
-      <div class="p-3">
+      <div class="p-3 sm:p-0">
         <img
           src="../assets/img/simeon.png"
           class="sm:hidden hero__image justify-end object-fit rounded-lg w-1/2 sm:transform translate-x-0 transform translate-x-20"
         />
 
-        <div class="flex px-4 py-2 mt-4 sm:w-full w-3/5 mx-auto">
+        <div class="flex px-4 sm:px-0 py-2 mt-4 sm:w-full w-3/5 mx-auto">
           <a
             href="https://twitter.com/TechviberNG"
             target="_blank"
