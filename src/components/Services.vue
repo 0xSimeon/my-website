@@ -54,7 +54,7 @@ export default {
   clip-path: polygon(0 14%, 100% 0%, 100% 99%, 0 91%);
 
   @include respond(tab-port) {
-    clip-path: polygon(0 3%, 100% 0%, 100% 98%, 0 99%);
+    clip-path: unset; 
   }
 
   &__heading {
