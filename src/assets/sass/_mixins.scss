@@ -12,7 +12,7 @@
 900 - 1200px ==> tablet landscape
 1200 - 1800+ ==> Big Desktop
 
-BREAKPOINT arguments: 
+BREAKPOINT arguments:
 - phone
 - tab-port
 - tab-land
@@ -43,20 +43,22 @@ BREAKPOINT arguments:
   }
 }
 
-// @mixin tab-port {
-//   @media only screen and (max-width: 600px) {
-//     @content;
-//   }
-// }
+@mixin dots {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    background: url('../assets/img/icons/dots.svg') center/cover no-repeat;
+    height: 30px;
+    width: 66px;
+    top: 45px;
+    margin-left: 35px;
+    transition: all 0.4s;
 
-// @mixin tab-land {
-//   @media only screen and (max-width: 600px) {
-//     @content;
-//   }
-// }
-
-// @mixin desktop {
-//   @media only screen and (max-width: 600px) {
-//     @content;
-//   }
-// }
+    @include respond(phone) {
+      width: 30px;
+      top: 32px;
+      margin-left: 20px;
+    }
+  }
+}
