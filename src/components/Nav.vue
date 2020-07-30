@@ -1,5 +1,5 @@
 <template>
-  <div class="navigation">
+  <div class="navigation shadow-xl">
     <input
       type="checkbox"
       name="navigation menu"
@@ -11,7 +11,7 @@
     <label
       name="toggle__button"
       role="toggle button"
-      class="navigation__button fixed z-50 rounded-full text-center cursor-pointer"
+      class="navigation__button fixed z-50 rounded-full text-center cursor-pointer shadow-lg"
       for="nav-toggle"
     >
       <span class="navigation__icon relative">&nbsp;</span>
@@ -46,7 +46,7 @@ export default {
       num: 0,
       checked: false
     };
-  },
+  }
 };
 </script>
 
@@ -73,6 +73,7 @@ export default {
     height: 100vh;
 
     opacity: 0;
+    visibility: hidden;
     width: 0;
     transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
   }
@@ -82,7 +83,6 @@ export default {
     list-style: none;
     text-align: center;
   }
-
 
   &__link {
     &:link,
@@ -112,8 +112,9 @@ export default {
   }
 
   &__checkbox:checked ~ &__nav {
-    opacity: 1;
     width: 100%;
+    visibility: visible;
+    opacity: 1;
   }
   &__icon {
     margin-top: 2rem;
@@ -163,6 +164,17 @@ export default {
   &__checkbox:checked + &__button &__icon::after {
     top: 0;
     transform: rotate(calc(180deg + 45deg));
+  }
+}
+
+@keyframes slidein {
+  from {
+    transform: translateX(-30px);
+  }
+  to {
+    transform: translateX(0);
+    
+    
   }
 }
 

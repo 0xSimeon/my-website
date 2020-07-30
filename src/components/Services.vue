@@ -1,6 +1,6 @@
 <template>
-  <section id="Services">
-    <div class="services py-16 pb-32 px-8 sm:px-4 sm:py-4 w-full">
+  <section id="Services" class="services">
+    <div class="py-16 pb-32 px-8 sm:px-4 sm:py-4 w-full">
       <h2
         class="services__heading  mt-16 sm:ml-0 px-4 sm:px-1 py-6 sm:text-4xl text-5xl font-bold font-headingFont"
       >
@@ -10,29 +10,35 @@
         class="services__grid grid grid-cols-3 gap-6 grid-row-1 md:grid-col-1 sm:grid-cols-1 ml-10 my-5 sm:ml-0 px-4 sm:px-1 sm py-6 w-full"
       >
         <div v-for="(service, index) in services" :key="index" class="px-2">
-          <h3 class="font-headingFont font-bold sm:text-2xl text-3xl mb-4">
+          <h3 class="font-headingFont font-bold sm:text-lg text-3xl mb-4">
             {{ service.title }}
           </h3>
-          <p class=" text-2xl sm:text-lg font-light font-textFont">
+          <p class=" text-2xl sm:text-lg  font-light font-textFont">
             {{ service.description }}
           </p>
         </div>
       </div>
+      <app-button
+        title="Contact me now"
+        :class="[margin]"
+        color="blue"
+      ></app-button>
     </div>
   </section>
 </template>
 
 <script>
+import Button from './Button.vue';
 export default {
   data() {
     return {
       title: 'What I do',
+      margin: 'ml-5 sm:ml-0 sm:p-3',
       services: [
         {
           title: 'Web Development',
           description: `Need a fully custom website for yourself or your business? I build
-            beautiful and unique websites to meet your goals and target audience
-            using html, css & javascript.`
+            beautiful and unique websites to meet your goals and target audience.`
         },
         {
           title: 'Website Repair',
@@ -44,6 +50,9 @@ export default {
         }
       ]
     };
+  },
+  components: {
+    appButton: Button
   }
 };
 </script>
@@ -54,27 +63,12 @@ export default {
   clip-path: polygon(0 14%, 100% 0%, 100% 99%, 0 91%);
 
   @include respond(tab-port) {
-    clip-path: unset; 
+    clip-path: unset;
   }
 
   &__heading {
-    position: relative;
-    &::after {
-      content: '';
-      position: absolute;
-      background: url('../assets/img/icons/dots.svg') center/cover no-repeat;
-      height: 30px;
-      width: 66px;
-      top: 45px;
-      margin-left: 35px;
-      transition: all 0.4s;
 
-      @include respond(phone) {
-        width: 30px;
-        top: 32px;
-        margin-left: 20px;
-      }
-    }
+    @include dots;
   }
 
   &__grid {

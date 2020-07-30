@@ -11,7 +11,7 @@
           <strong>I'm Simeon</strong>.
         </h2>
         <p
-          class="sm:text-2xl text-4xl font-medium font-textFont  mb-8 
+          class="sm:text-2xl text-4xl font-medium font-textFont  mb-8
         "
         >
           I am a frontend developer based in
@@ -19,8 +19,8 @@
         </p>
 
         <div class="flex">
-          <app-button title="My Work" colorBlue="true"></app-button>
-          <app-button title="Let's talk"></app-button>
+          <app-button title="My Work" color="blue"></app-button>
+          <app-button title="Let's talk" color="red"></app-button>
         </div>
       </div>
 
@@ -67,10 +67,7 @@
             </svg>
           </a>
 
-          <!-- <svg v-for="icon in socials" :key="icon.id"> -->
-          <!-- <use :href="`../assets/img/icons/sprite.svg#${icon}`"></use> -->
-          <!-- <use :href="icon"></use>
-          </svg> -->
+
         </div>
       </div>
     </section>
