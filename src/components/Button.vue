@@ -15,7 +15,16 @@ export default {
   data() {
     return {};
   },
-  props: ['title', 'color']
+  props: {
+    title: {
+      type: String,
+      required: true
+    },
+    color: {
+      type: String,
+      default: 'blue'
+    }
+  }
 };
 </script>
 
