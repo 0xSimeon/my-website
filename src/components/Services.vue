@@ -21,7 +21,6 @@
       <app-button
         title="Contact me now"
         :class="[margin]"
-        color="blue"
       ></app-button>
     </div>
   </section>
