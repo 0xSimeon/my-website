@@ -6,67 +6,95 @@
       {{ sectionTitle }}
     </h2>
     <div
-      class="project__grid grid gap-8  justify-center align-center py-16 px-4 sm:px-0  grid-cols-3 md:grid-cols-2 sm:grid-cols-1  mx-auto"
+      class="project__grid grid gap-8  justify-center align-center py-16 px-4 sm:px-0  grid-cols-3 md:grid-cols-2 sm:grid-cols-1  mx-auto mb-8 sm:mb-1"
     >
       <div
         v-for="(project, index) in projects"
         :key="index"
-        class=" project__card border  shadow-lg"
+        class=" project__card border shadow-lg rounded"
       >
-        <div class="project__card-test  rounded shadow-lg">
-          <h4 class="headingFont text-3xl p-2">{{ project.title }}</h4>
+        <div class="project__card-test border  rounded shadow-lg">
           <img
             :src="require(`../assets/img/${project.imgUrl}`)"
             alt=""
-            class="project__img"
+            class="project__img rounded"
           />
-          <p class="p-2 textFont text-xl">{{ project.description }}</p>
-          <p class="p-2 textFont text-xl">
+          <h4
+            class="project__title font-bold headingFont text-3xl sm:text-2xl p-2"
+          >
+            {{ project.title }}
+          </h4>
+          <p class="p-2 project__text textFont text-xl sm:text-base ">
+            {{ project.description }}
+          </p>
+          <p class="p-2 textFont text-xl sm:text-base">
             <strong>{{ toolsTitle }}</strong
             >{{ project.tools }}
           </p>
-          <div>
+          <div class="flex mt-4">
+            <a :href="project.links.github">
+              <svg class="project__card-icon m-1">
+                <use href="../assets/img/icons/sprite.svg#icon-github"></use>
+              </svg>
+            </a>
 
+            <a :href="project.links.link">
+              <svg class="project__card-icon m-1">
+                <use href="../assets/img/icons/sprite.svg#icon-tab"></use>
+              </svg>
+            </a>
           </div>
-
         </div>
       </div>
     </div>
+    <app-button title="View more on Github!" pill="true" color='red'></app-button>
   </section>
 </template>
 
 <script>
-
+import Button from './Button.vue';
 export default {
+  components: {
+    appButton: Button
+  },
   data() {
     return {
-      deviceHeight: 0,
       sectionTitle: `Stuffs I've built`,
       toolsTitle: 'Built with: ',
       projects: [
         {
           title: 'Calculator app',
           description: `A fully responsive web app to perform basic arithmetic operations. It's also my first javascript app! 😄`,
-          imgUrl: 'simeon.png',
-          tools: 'html5, css3, javascript'
+          imgUrl: 'calculator.png',
+          tools: 'html5, css3, javascript',
+          links: {
+            github: 'https://github.com/simeon4real/Calculator',
+            link: 'https://calculatorjs-app.netlify.app/'
+          }
         },
         {
           title: 'Javascript Quiz app',
-          description: `A fun quiz application I built as one of the task I got during start.ng internship.`,
-          imgUrl: 'simeon.png',
-          tools: 'html5, css3, javascript'
+          description: `This is a fun quiz application I built as one of the task I got during start.ng internship in May 2020.`,
+          imgUrl: 'js-quiz.png',
+          tools: 'html5, css3, javascript',
+          links: {
+            github: 'https://github.com/simeon4real/Javascript-quiz',
+            link: 'https://javascript-quiz-game.netlify.app/'
+          }
         },
         {
-          title: 'loremjdlkjfkld',
-          description:
-            'jkhdksj hajshiuayhg  yufdghhdjgsfdssss ssss ssssssss ssssssss ss sss sssg',
-          imgUrl: 'simeon.png',
-          tools: 'html5, css3, javascript'
-        },
-
+          title: 'My Personal Website',
+          description: `Yup! It's this website you're on right now. I created my personal website to practice using Vue for creating web apps.`,
+          imgUrl: 'my-website.png',
+          tools: 'Vue, Tailwind, Sass',
+          links: {
+            github: 'https://github.com/simeon4real/my-website',
+            link: 'https://simicode.me'
+          }
+        }
       ]
     };
-  },
+  }
 };
 </script>
 
@@ -90,6 +118,15 @@ export default {
     }
   }
 
+  &__title {
+    border-bottom: 5px solid $color-heading;
+    color: $color-heading;
+  }
+
+  &__text {
+    color: $color-text;
+  }
+
   &__card,
   &__card-test {
     background: white;
@@ -99,7 +136,11 @@ export default {
     transform: skewY(-5deg);
     transform-origin: 100% 0;
     z-index: 10;
-    padding: 0.8rem;
+    padding: 0.5rem;
+
+    @include respond(phone) {
+      transform: skewY(0);
+    }
 
     &:hover::before {
       transform: scale(1);
@@ -131,7 +172,14 @@ export default {
       transform: skewY(5deg);
       z-index: 2;
       padding: 0.5rem;
-      height: 32rem;
+      height: 100%;
+      @include respond(phone) {
+        transform: skewY(0);
+      }
+
+      @include respond(phone) {
+        height: unset;
+      }
     }
     &::after {
       top: 1px;
@@ -145,6 +193,17 @@ export default {
     &::after,
     &::before {
       position: absolute;
+    }
+
+    &-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      fill: $color-heading;
+
+      @include respond(phone) {
+        width: 2rem;
+        height: 2rem;
+      }
     }
   }
 }
