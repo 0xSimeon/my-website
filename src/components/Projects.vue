@@ -24,30 +24,37 @@
           >
             {{ project.title }}
           </h4>
-          <p class="p-2 project__text textFont text-xl sm:text-base ">
+          <p class="p-2 project__text textFont text-xl sm:text-lg ">
             {{ project.description }}
           </p>
           <p class="p-2 textFont text-xl sm:text-base">
             <strong>{{ toolsTitle }}</strong
-            >{{ project.tools }}
+            >{{ project.tools | capitalize }}
           </p>
-          <div class="flex mt-4">
-            <a :href="project.links.github">
+          <div class="flex mt-4 justify-between">
+            <div>
+              <p class="textFont font-bold text-xl sm:text-lg">Code</p>
+              <a :href="project.links.github">
               <svg class="project__card-icon m-1">
                 <use href="../assets/img/icons/sprite.svg#icon-github"></use>
               </svg>
             </a>
+            </div>
 
-            <a :href="project.links.link">
+            <div>
+              <p class="textFont font-bold text-xl sm:text-lg">Live</p>
+              <a :href="project.links.link">
               <svg class="project__card-icon m-1">
                 <use href="../assets/img/icons/sprite.svg#icon-tab"></use>
               </svg>
             </a>
+            </div>
+
           </div>
         </div>
       </div>
     </div>
-    <app-button title="View more on Github!" pill="true" color='red'></app-button>
+    <app-button link="https://github.com/simeon4real/repositories" title="View more on Github!" pill="true" color='red'></app-button>
   </section>
 </template>
 
@@ -94,6 +101,13 @@ export default {
         }
       ]
     };
+  },
+  filters: {
+    capitalize(value) {
+      return value.split(" ")
+      .map(el => `${el[0].toUpperCase()}${el.slice(1, el.length)}`)
+      .join(" ");
+    }
   }
 };
 </script>
@@ -196,13 +210,13 @@ export default {
     }
 
     &-icon {
-      width: 2.5rem;
-      height: 2.5rem;
+      width: 2rem;
+      height: 2rem;
       fill: $color-heading;
 
       @include respond(phone) {
-        width: 2rem;
-        height: 2rem;
+        width: 1.8rem;
+        height: 1.8rem;
       }
     }
   }

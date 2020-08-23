@@ -1,9 +1,9 @@
 <template>
   <div>
     <a
-      href="#"
+      :href="link"
       :class="[color === 'blue' ? 'btn--blue' : 'btn--red']"
-      class=" btn inline-block text-white rounded px-4 py-4 sm:text-xl  font-bold text-center text-2xl font-textFont shadow-xl min-w-button sm:min-w-1/2"
+      class=" btn inline-block text-white rounded px-4 cursor-pointer py-4 sm:text-xl  font-bold text-center text-2xl font-textFont shadow-xl min-w-button sm:min-w-1/2"
     >
       {{ title }}
     </a>
@@ -23,7 +23,12 @@ export default {
     color: {
       type: String,
       default: 'blue'
-    }
+    },  
+    link: {
+      type: String,
+      required: false
+
+    },
   }
 };
 </script>

@@ -1,6 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Roboto+Slab:wght@300;400&display=swap');
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+::-webkit-scrollbar-track {
+  background: #3da9fc; /* color of the tracking area */
+}
+::-webkit-scrollbar-thumb {
+  background: #ef4565; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  /* border: 3px solid #90b4ce; creates padding around scroll thumb */
+}
+
+
+body {
+  scrollbar-width: thin; /* "auto" or "thin"  */
+  scrollbar-color: #ef4565 #3da9fc; /* scroll thumb & track */
+}
+
+
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
