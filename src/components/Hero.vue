@@ -20,7 +20,7 @@
 
         <div class="flex">
           <app-button title="My Work" link="#Projects"></app-button>
-          <app-button title="Let's talk" color="red"></app-button>
+          <app-button title="Let's talk" color="red" link="#Contact"></app-button>
         </div>
       </div>
 

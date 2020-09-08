@@ -13,7 +13,7 @@
         :key="index"
         class=" project__card border shadow-lg rounded"
       >
-        <div class="project__card-test border  rounded shadow-lg">
+        <div class="project__card-test border  rounded shadow-lg flex flex-col items-stretch">
           <img
             :src="require(`../assets/img/${project.imgUrl}`)"
             alt=""
@@ -35,26 +35,31 @@
             <div>
               <p class="textFont font-bold text-xl sm:text-lg">Code</p>
               <a :href="project.links.github">
-              <svg class="project__card-icon m-1">
-                <use href="../assets/img/icons/sprite.svg#icon-github"></use>
-              </svg>
-            </a>
+                <svg class="project__card-icon m-1">
+                  <use href="../assets/img/icons/sprite.svg#icon-github"></use>
+                </svg>
+              </a>
             </div>
 
-            <div>
+            <div class="project__grid-info">
               <p class="textFont font-bold text-xl sm:text-lg">Live</p>
               <a :href="project.links.link">
-              <svg class="project__card-icon m-1">
-                <use href="../assets/img/icons/sprite.svg#icon-tab"></use>
-              </svg>
-            </a>
+                <svg class="project__card-icon m-1">
+                  <use href="../assets/img/icons/sprite.svg#icon-tab"></use>
+                </svg>
+              </a>
             </div>
-
           </div>
         </div>
       </div>
     </div>
-    <app-button link="https://github.com/simeon4real/repositories" title="View more on Github!" pill="true" color='red'></app-button>
+    <app-button
+      link="https://github.com/simeon4real/repositories"
+      title="View more on Github!"
+      pill="true"
+      color="red"
+      classes="sm:mb-8"
+    ></app-button>
   </section>
 </template>
 
@@ -70,20 +75,20 @@ export default {
       toolsTitle: 'Built with: ',
       projects: [
         {
-          title: 'Calculator app',
-          description: `A fully responsive web app to perform basic arithmetic operations. It's also my first javascript app! 😄`,
+          title: 'CalIT',
+          description: `A calculator web app`,
           imgUrl: 'calculator.png',
-          tools: 'html5, css3, javascript',
+          tools: 'html5, css3, javascript.',
           links: {
             github: 'https://github.com/simeon4real/Calculator',
             link: 'https://calculatorjs-app.netlify.app/'
           }
         },
         {
-          title: 'Javascript Quiz app',
-          description: `This is a fun quiz application I built as one of the task I got during start.ng internship in May 2020.`,
+          title: 'JQuizy',
+          description: `A fun quiz app`,
           imgUrl: 'js-quiz.png',
-          tools: 'html5, css3, javascript',
+          tools: 'html, css, javascript.',
           links: {
             github: 'https://github.com/simeon4real/Javascript-quiz',
             link: 'https://javascript-quiz-game.netlify.app/'
@@ -91,22 +96,44 @@ export default {
         },
         {
           title: 'My Personal Website',
-          description: `Yup! It's this website you're on right now. I created my personal website to practice using Vue for creating web apps.`,
+          description: `My Portfolio website. `,
           imgUrl: 'my-website.png',
-          tools: 'Vue, Tailwind, Sass',
+          tools: 'Vue, Tailwindcss, Sass.',
           links: {
             github: 'https://github.com/simeon4real/my-website',
             link: 'https://simicode.me'
           }
-        }
+        },
+        {
+          title: 'Shortly',
+          description: `An API-Based Url shortener `,
+          imgUrl: 'shortly.png',
+          tools: 'Vue, Sass, API.',
+          links: {
+            github: 'https://github.com/simeon4real/my-website',
+            link: 'https://simicode.me'
+          }
+        },
+        {
+          title: 'WeBlog',
+          description: `An API-Based Blogsite`,
+          imgUrl: 'weblog.png',
+          tools: 'Vue, Tailwindcss, Sass, Vue Router',
+          links: {
+            github: 'https://github.com/simeon4real/my-website',
+            link: 'https://simicode.me'
+          }
+        },
+
       ]
     };
   },
   filters: {
     capitalize(value) {
-      return value.split(" ")
-      .map(el => `${el[0].toUpperCase()}${el.slice(1, el.length)}`)
-      .join(" ");
+      return value
+        .split(' ')
+        .map(el => `${el.toUpperCase()}`)
+        .join(' ');
     }
   }
 };
@@ -117,6 +144,7 @@ export default {
   color: black;
   &__heading {
     @include dots;
+    color: $color-primary;
   }
 
   &__img {
@@ -127,8 +155,14 @@ export default {
 
   &__grid {
     justify-items: center;
+    align-items: stretch;
     @include respond(phone) {
       grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+
+    &-list {
+
     }
   }
 
