@@ -24,7 +24,7 @@
       <p class="footer__text font-textFont text-2xl sm:text-lg">
         Made with <i class="footer__coffee fas fa-coffee"></i> and
         <i class="fas fa-heart footer__heart pulse"></i> <br />by
-        <span>Simeon Udoh</span>
+        <span class="footer__text-bg px-3 rounded">Simeon Udoh</span>
       </p>
     </div>
   </footer>
@@ -72,6 +72,10 @@ export default {
   &__text {
     text-align: center;
     transition: all 0.2s;
+
+    &-bg {
+      background: $color-primary;
+    }
   }
 
   &__heart {
