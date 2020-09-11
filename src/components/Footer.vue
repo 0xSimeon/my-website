@@ -7,7 +7,7 @@
     </h2>
     <div class="footer__container w-full mx-auto border-2 px-6 py-3">
       <p
-        class="text-2xl sm:text-lg  font-light font-textFont px-4 sm:px-1 py-2 footer__text"
+        class="text-2xl sm:text-lg  font-light font-textFont px-4 sm:px-1 py-2 footer__text font-normal"
       >
         Whether you want me to contribute to your paid / free project or you
         just want to get acquinted and be friends, feel free to reach out. I'd
@@ -15,17 +15,17 @@
       </p>
       <app-button
         link="mailto:simeon.udoh45@gmail.com"
-        title="Say Hello 👋"
+        title="Say Hello 👋"..
         classes="mx-auto w-2/5 sm:w-4/5 flex justify-center my-4"
       ></app-button>
     </div>
     <div class="footer__details rounded">
-      <p class="footer__text font-textFont text-2xl sm:text-lg">
+      <p class="footer__text font-textFont text-2xl font-normal sm:text-lg">
         Copyright &copy; {{ getYear }}.
       </p>
-      <p class="footer__text font-textFont text-2xl sm:text-lg">
+      <p class="footer__text font-textFont font-normal text-2xl sm:text-lg">
        Made with <i class="fas fa-heart footer__heart pulse"></i> &nbsp; & Developed by
-        <span class="footer__text-bg px-3 text-2xl sm:text-xl font-textFont rounded font-bold">Simeon Udoh</span>
+        <span class="footer__text-bg font-normal px-3 text-2xl sm:text-xl font-textFont rounded font-bold">Simeon Udoh</span>
       </p>
     </div>
   </footer>
@@ -47,9 +47,9 @@ export default {
 
 <style lang="scss" scoped>
 .footer {
+  background: var(--bg);
   &__heading {
     @include dots;
-    color: var(--color-primary);
     text-align: center;
 
     &::after {
@@ -80,10 +80,11 @@ export default {
   &__text {
     text-align: center;
     transition: all 0.2s;
+    color: var(--color-text);
 
     &-bg {
       background: var(--color-primary);
-      color: var(--bg);
+      color: var(--color-text);
     }
   }
 

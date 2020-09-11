@@ -141,10 +141,9 @@ export default {
 
 <style lang="scss" scoped>
 .project {
-  color: black;
+  color: var(--color-text);
   &__heading {
     @include dots;
-    color: var(--color-primary);
   }
 
   &__img {
@@ -168,16 +167,14 @@ export default {
 
   &__title {
     border-bottom: 5px solid var(--color-heading);
-    color: var(--color-heading);
   }
 
   &__text {
-    color: var(--color-text);
   }
 
   &__card,
   &__card-test {
-    background: white;
+    background: var(--bg);
   }
 
   &__card {
@@ -246,7 +243,7 @@ export default {
     &-icon {
       width: 2rem;
       height: 2rem;
-      fill: var(--color-heading);
+      fill: var(--color-text);
 
       @include respond(phone) {
         width: 1.8rem;

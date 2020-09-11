@@ -51,6 +51,8 @@ export default {
 
 <style lang="scss" scoped>
 .navigation {
+    color: var(--color-nav);
+
   &__button {
     background: var(--bg);
     height: 4.5rem;
@@ -89,18 +91,17 @@ export default {
         120deg,
         transparent 0%,
         transparent 50%,
-        var(--bg) 50%
+        var(--color-nav) 50%
       );
       background-size: 220%;
       transition: all 0.5s;
-      color: var(--bg);
     }
 
     &:hover,
     &:active {
       background-position: 100%;
       transform: scale(1.05);
-      color: var(--color-primary);
+      color: var(--navLinkHover);
       transform: translateX(1rem);
     }
   }
@@ -121,7 +122,7 @@ export default {
     &::after {
       width: 2.5rem;
       height: 2px;
-      background: black;
+      background: var(--color-text);
       display: inline-block;
     }
 

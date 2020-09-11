@@ -36,41 +36,20 @@ export default {
 </script>
 
 <style lang="scss">
-:root {
-  // --color-primary: #3da9fc;
-  // --color-primary-1: #90b4ce;
-  // --color-secondary: #ef4565;
-  // --color-tertiary: #d8eefe;
-  // --bg: #fffffe;
-  // // FONT COLORS
-  // --color-heading: #094067;
-  // --color-text: #33272a;
-}
 
-:root.dark-mode {
-  // --color-primary: #12334C;
-  // --color-primary-1: #90b4ce;
-  // --bg: #E6E6E5;
-  // --color-secondary: #6C1F2D;
-  // --color-tertiary: #828F98;
 
-  // // FONT COLORS
-  // --color-heading: #E6ECF0;
-  // --color-text: #F7F8F8;
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: black;
-    color: blue;
-  }
-}
-@media (prefers-color-scheme: light) {
-  body {
-    background-color: white;
-    color: blue;
-  }
-}
+// @media (prefers-color-scheme: dark) {
+//   body {
+//     background-color: black;
+//     color: blue;
+//   }
+// }
+// @media (prefers-color-scheme: light) {
+//   body {
+//     background-color: white;
+//     color: blue;
+//   }
+// }
 
 body {
   background: var(--bg);

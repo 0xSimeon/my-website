@@ -1,5 +1,5 @@
 <template>
-  <div class="mode">
+  <div class="mode" @click="changeTheme">
     <img
       v-if="darkTheme"
       class="icon"
@@ -32,18 +32,15 @@ export default {
   methods: {
     changeTheme() {
       this.darkTheme = !this.darkTheme;
+      document.body.classList.toggle('dark');
       //   const toggle = document.querySelector('.icon');
       //   if (!document.documentElement.getAttribute('data-theme')) {
       //     this.darkMode === true
       //   document.documentElement.setAttribute('data-theme', 'dark');
-
       //   } else {
       //     document.documentElement.setAttribute('data-theme', 'light');
-
       //   }
-
       //   toggle.addEventListener('change', this.changeTheme);
-
       // }
     }
   }

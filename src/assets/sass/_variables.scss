@@ -8,3 +8,34 @@
 // // FONT COLORS
 // $color-heading: #094067;
 // $color-text: #5f6c7b;
+
+body {
+  --color-primary: #3da9fc;
+  --color-primary-1: #90b4ce;
+  --color-secondary: #ef4565;
+  --color-tertiary: #d8eefe;
+  --bg: #fffffe;
+  // FONT COLORS
+  --color-text: #33272a;
+  --color-menu: black;
+  --color-social: var(--color-primary);
+  --color-nav: var(--bg);
+  --navLinkHover: var(--color-primary);
+
+  transition: all .32s;
+}
+
+body.dark {
+  --color-primary: #12334c;
+  --color-primary-1: #90b4ce;
+  --bg: #03131F;
+  --color-secondary: #48151E;
+  --color-tertiary: #41474C;
+  // FONT COLORS
+
+  --color-text: #fffffe;
+  --color-menu: var(--color-text);
+  --color-social: var(--color-text);
+  --color-nav: var(--color-text);
+
+}

@@ -102,7 +102,7 @@ export default {
     border-bottom: 10px solid var(--color-secondary);
   }
   &__icon {
-    fill: var(--color-primary);
+    fill: var(--color-social);
     width: 3rem;
     height: 3rem;
     transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);

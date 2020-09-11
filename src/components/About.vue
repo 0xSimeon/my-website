@@ -6,12 +6,12 @@
       A bit about me...
     </h2>
     <div class="about__container w-full mx-auto">
-      <p class="text-2xl sm:text-lg  font-light font-textFont">
+      <p class="text-2xl sm:text-lg  font-normal font-textFont">
         I'm a second year computer science student who is passionate about making the
         web beautiful and accessible to everyone. I'm also passionate about participating and building inclusive communities which lead me to volunteer to hold weekly coding workshops in my school for Google Developer Student Clubs.
       </p>
 
-      <p class="text-2xl sm:text-lg  font-light font-textFont mt-5">When I'm not coding / programming, I'm either trading the cryptocurrency market or I'm playing video games with my brothers. I also cook and read books as well. Movies? I'm a big fan of series. My all time favs are: <strong> Originals (\w Vampire Diaries), Teen wolf, Empire, Prison break and yes, Money heist! 😉 </strong></p>
+      <p class="text-2xl sm:text-lg  font-normal font-textFont mt-5">When I'm not coding / programming, I'm either trading the cryptocurrency market or I'm playing video games with my brothers. I also cook and read books as well. Movies? I'm a big fan of series. My all time favs are: <strong> Originals (\w Vampire Diaries), Teen wolf, Empire, Prison break and yes, Money heist! 😉 </strong></p>
     </div>
   </section>
 </template>
