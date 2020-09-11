@@ -43,7 +43,6 @@ export default {
   data() {
     return {
       navLinks: ['About', 'Services', 'Projects', 'Contact'],
-      num: 0,
       checked: false
     };
   }
@@ -53,7 +52,7 @@ export default {
 <style lang="scss" scoped>
 .navigation {
   &__button {
-    background: $color-light;
+    background: var(--bg);
     height: 4.5rem;
     width: 4.5rem;
     top: 2.5rem;
@@ -65,13 +64,12 @@ export default {
     width: 3.5rem;
     top: 3rem;
     right: 4rem;
-    background: radial-gradient($color-secondary, $color-primary);
+    background: radial-gradient(var(--color-secondary), var(--color-primary));
     transition: transform 0.8s cubic-bezier(0.45, 0, 0.55, 1);
   }
 
   &__nav {
     height: 100vh;
-
     opacity: 0;
     visibility: hidden;
     width: 0;
@@ -91,18 +89,18 @@ export default {
         120deg,
         transparent 0%,
         transparent 50%,
-        $color-light 50%
+        var(--bg) 50%
       );
       background-size: 220%;
       transition: all 0.5s;
-      color: $color-light;
+      color: var(--bg);
     }
 
     &:hover,
     &:active {
       background-position: 100%;
       transform: scale(1.05);
-      color: $color-primary;
+      color: var(--color-primary);
       transform: translateX(1rem);
     }
   }
@@ -173,8 +171,6 @@ export default {
   }
   to {
     transform: translateX(0);
-    
-    
   }
 }
 
@@ -203,61 +199,4 @@ export default {
     }
   }
 }
-// // .nav {
-// //   &__link {
-// //     color: $color-text;
-// //     position: relative;
-
-// //     &:hover {
-// //       color: $color-heading;
-// //     }
-
-// //     &::before {
-// //       content: '';
-// //       position: absolute;
-// //       left: 50%;
-// //       bottom: 0;
-// //       width: 100%;
-// //       height: 2px;
-// //       background-color: $color-secondary;
-// //       transform-origin: center;
-// //       transform: translate(-50%, 0) scaleX(0);
-// //       transition: transform 0.3s ease-in-out;
-// //     }
-
-// //     &:hover::before {
-// //       transform: translate(-50%, 0) scaleX(1);
-// //     }
-// //   }
-
-// // .hamburger {
-// //   top: 51px;
-// //   right: 52px;
-// //   width: 48px;
-// //   height: 48px;
-// //   &__top-bun,
-// //   &__bottom-bun {
-// //     content: '';
-// //     position: absolute;
-// //     width: 24px;
-// //     height: 2px;
-// //     background: #333;
-// //   }
-
-// //   &__top-bun {
-// //     transform: translateY(-5px);
-// //   }
-// //   &__bottom-bun {
-// //     transform: translateY(3px);
-// // }
-/*
-  Open
-   top
-  {transform: rotate(45deg) translateY(0px);}
-  bottom
-  transform: rotate(-45deg) translateY(0px);
-  
-}
-
-*/
 </style>

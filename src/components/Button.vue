@@ -46,11 +46,11 @@ export default {
 
   &--blue {
     // @apply bg-blue-700 text-white;
-    background: $color-primary;
+    background: var(--color-primary);
   }
 
   &--red {
-    background: $color-secondary;
+    background: var(--color-secondary);
     margin-left: 1.5rem;
   }
 }

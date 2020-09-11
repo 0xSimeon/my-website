@@ -7,12 +7,11 @@
     </h2>
     <div class="about__container w-full mx-auto">
       <p class="text-2xl sm:text-lg  font-light font-textFont">
-        I'm a second year computer science who is passionate about making the
-        web beautiful and accessible to everyone. I'm also passionate about participating and building inclusive communities which lead me to volunteer to hold weekly coding workshops in my school for Google Developer Student Clubs.  Right now, I'm exploring the Vuejs framework and building more projects with
-        everything I know while still exploring in-depth concepts.
+        I'm a second year computer science student who is passionate about making the
+        web beautiful and accessible to everyone. I'm also passionate about participating and building inclusive communities which lead me to volunteer to hold weekly coding workshops in my school for Google Developer Student Clubs.
       </p>
 
-      <p class="text-2xl sm:text-lg  font-light font-textFont mt-5">When I'm not coding / programming, I'm either trading the Bitcoin & Crypto markets or I'm playing video games with my brothers. I also cook and read books as well. Movies? I'm a big fan of series. My all time favs are: <strong> Originals, Vampire Diaries, Teen wolf, Empire, Prison break, Money heist. etc</strong></p>
+      <p class="text-2xl sm:text-lg  font-light font-textFont mt-5">When I'm not coding / programming, I'm either trading the cryptocurrency market or I'm playing video games with my brothers. I also cook and read books as well. Movies? I'm a big fan of series. My all time favs are: <strong> Originals (\w Vampire Diaries), Teen wolf, Empire, Prison break and yes, Money heist! 😉 </strong></p>
     </div>
   </section>
 </template>
@@ -23,7 +22,7 @@ export default {};
 
 <style lang="scss" scoped>
 .about {
-  background: $color-tertiary;
+  background: var(--color-tertiary);
   clip-path: polygon(0 14%, 100% 0%, 100% 99%, 0 91%);
   @include respond(tab-port) {
     clip-path: unset;

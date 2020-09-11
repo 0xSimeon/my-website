@@ -86,11 +86,7 @@ export default {
         `../assets/img/icons/sprite.svg#icon-facebook`,
         `../assets/img/icons/sprite.svg#icon-instagram`
       ]
-      // github: `../assets/img/icons/sprite.svg#icon-github`,
-      // twitter: `../assets/img/icons/sprite.svg#icon-twitter`,
-      // linkedin: `../assets/img/icons/sprite.svg#icon-linkedin`,
-      // facebook: `../assets/img/icons/sprite.svg#icon-facebook`,
-      // instagram: `../assets/img/icons/sprite.svg#icon-instagram`
+
     };
   },
   components: {
@@ -102,11 +98,11 @@ export default {
 <style lang="scss" scoped>
 .hero {
   &__image {
-    box-shadow: 50px -25px 0px 0px $color-primary;
-    border-bottom: 10px solid $color-secondary;
+    box-shadow: 50px -25px 0px 0px var(--color-primary);
+    border-bottom: 10px solid var(--color-secondary);
   }
   &__icon {
-    fill: $color-primary;
+    fill: var(--color-primary);
     width: 3rem;
     height: 3rem;
     transition: transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
@@ -118,10 +114,10 @@ export default {
 }
 
 .font-headingFont {
-  color: $color-heading;
+  color: var(--color-heading);
 }
 
 .font-textFont {
-  color: $color-text;
+  color: var(--color-text);
 }
 </style>

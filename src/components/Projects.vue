@@ -144,7 +144,7 @@ export default {
   color: black;
   &__heading {
     @include dots;
-    color: $color-primary;
+    color: var(--color-primary);
   }
 
   &__img {
@@ -167,12 +167,12 @@ export default {
   }
 
   &__title {
-    border-bottom: 5px solid $color-heading;
-    color: $color-heading;
+    border-bottom: 5px solid var(--color-heading);
+    color: var(--color-heading);
   }
 
   &__text {
-    color: $color-text;
+    color: var(--color-text);
   }
 
   &__card,
@@ -205,11 +205,11 @@ export default {
       border-radius: 4px;
       background: linear-gradient(
         30deg,
-        $color-primary 10%,
-        $color-secondary 25%,
-        $color-tertiary 50%,
-        $color-primary 75%,
-        $color-secondary 90%
+        var(--color-primary) 10%,
+        var(--color-secondary) 25%,
+        var(--color-tertiary) 50%,
+        var(--color-primary) 75%,
+        var(--color-secondary) 90%
       );
       opacity: 0;
       content: '';
@@ -246,7 +246,7 @@ export default {
     &-icon {
       width: 2rem;
       height: 2rem;
-      fill: $color-heading;
+      fill: var(--color-heading);
 
       @include respond(phone) {
         width: 1.8rem;

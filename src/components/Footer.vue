@@ -20,11 +20,12 @@
       ></app-button>
     </div>
     <div class="footer__details rounded">
-      <p class="footer__text font-textFont text-2xl sm:text-lg">Copyright &copy; {{ getYear }}.</p>
       <p class="footer__text font-textFont text-2xl sm:text-lg">
-        Made with <i class="footer__coffee fas fa-coffee"></i> and
-        <i class="fas fa-heart footer__heart pulse"></i> <br />by
-        <span class="footer__text-bg px-3 rounded">Simeon Udoh</span>
+        Copyright &copy; {{ getYear }}.
+      </p>
+      <p class="footer__text font-textFont text-2xl sm:text-lg">
+       Made with <i class="fas fa-heart footer__heart pulse"></i> &nbsp; & Developed by
+        <span class="footer__text-bg px-3 text-2xl sm:text-xl font-textFont rounded font-bold">Simeon Udoh</span>
       </p>
     </div>
   </footer>
@@ -48,7 +49,8 @@ export default {
 .footer {
   &__heading {
     @include dots;
-    color: $color-primary;
+    color: var(--color-primary);
+    text-align: center;
 
     &::after {
       @include respond(phone) {
@@ -59,14 +61,20 @@ export default {
 
   &__container {
     max-width: 40rem;
-    border: 2.5px solid $color-primary;
+    border: 2.5px solid var(--color-primary);
   }
 
   &__details {
     margin-top: 4.5rem;
-    background: $color-secondary;
-    padding: 1rem;
-    color: white;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    @include respond(phone) {
+      flex-direction: column;
+      justify-content: center;
+    }
+
   }
 
   &__text {
@@ -74,21 +82,26 @@ export default {
     transition: all 0.2s;
 
     &-bg {
-      background: $color-primary;
+      background: var(--color-primary);
+      color: var(--bg);
     }
   }
 
   &__heart {
-    color: white;
+    color: red;
   }
 
   &__coffee {
-    color: $color-primary;
+    color: var(--color-primary);
   }
 
   &__heart,
   &__coffee {
-    font-size: 2rem;
+    font-size: 1.8rem;
+
+    @include respond(phone) {
+      font-size: 1.5rem;
+    }
   }
 }
 
