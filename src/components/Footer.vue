@@ -7,7 +7,7 @@
     </h2>
     <div class="footer__container w-full mx-auto border-2 px-6 py-3">
       <p
-        class="text-2xl sm:text-lg  font-light font-textFont px-4 sm:px-1 py-2 footer__text font-normal"
+        class="text-2xl sm:text-lg   font-textFont px-4 sm:px-1 py-2 footer__text font-normal"
       >
         Whether you want me to contribute to your paid / free project or you
         just want to get acquinted and be friends, feel free to reach out. I'd
@@ -15,7 +15,7 @@
       </p>
       <app-button
         link="mailto:simeon.udoh45@gmail.com"
-        title="Say Hello 👋"..
+        title="Say Hello 👋"
         classes="mx-auto w-2/5 sm:w-4/5 flex justify-center my-4"
       ></app-button>
     </div>
@@ -25,7 +25,7 @@
       </p>
       <p class="footer__text font-textFont font-normal text-2xl sm:text-lg">
        Made with <i class="fas fa-heart footer__heart pulse"></i> &nbsp; & Developed by
-        <span class="footer__text-bg font-normal px-3 text-2xl sm:text-xl font-textFont rounded font-bold">Simeon Udoh</span>
+        <span class="footer__text-bg  px-3 text-2xl sm:text-xl font-textFont rounded font-bold">Simeon Udoh</span>
       </p>
     </div>
   </footer>
