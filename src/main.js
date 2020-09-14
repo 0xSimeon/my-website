@@ -5,6 +5,12 @@ import App from './App.vue';
 // Use if the above doesn't work.
 import './assets/css/tailwind.css';
 
+Vue.filter('capitalize', value => {
+  return value
+    .split(' ')
+    .map(el => `${el.toUpperCase()}`)
+    .join(' ');
+});
 
 Vue.config.productionTip = false;
 

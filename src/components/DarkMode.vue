@@ -10,11 +10,6 @@
       class="icon"
       :src="require(`../assets/img/icons/${icons.light}`)"
     />
-    <!-- <svg>
-      <use :href="require(`../assets/img/icons/${icons.dark}#sun`)"></use>
-    </svg> -->
-
-    <!-- <p>jfhfgsfggf</p> -->
   </div>
 </template>
 
@@ -33,15 +28,7 @@ export default {
     changeTheme() {
       this.darkTheme = !this.darkTheme;
       document.body.classList.toggle('dark');
-      //   const toggle = document.querySelector('.icon');
-      //   if (!document.documentElement.getAttribute('data-theme')) {
-      //     this.darkMode === true
-      //   document.documentElement.setAttribute('data-theme', 'dark');
-      //   } else {
-      //     document.documentElement.setAttribute('data-theme', 'light');
-      //   }
-      //   toggle.addEventListener('change', this.changeTheme);
-      // }
+
     }
   }
 };
@@ -69,5 +56,10 @@ export default {
   height: 4rem;
 
   cursor: pointer;
+  transition: all .2s;
+
+  &:hover {
+    opacity: .9;
+  }
 }
 </style>

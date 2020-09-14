@@ -58,8 +58,8 @@ export default {
 
 <style lang="scss" scoped>
 .services {
-  background: var(--color-tertiary);
-  clip-path: polygon(0 14%, 100% 0%, 100% 99%, 0 91%);
+  background: var(--bg);
+  // clip-path: polygon(0 14%, 100% 0%, 100% 99%, 0 91%);
 
   @include respond(tab-port) {
     clip-path: unset;

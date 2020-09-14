@@ -40,6 +40,7 @@ export default {
 .btn {
   transition: all 0.2s;
   box-sizing: border-box;
+  transition: all .2s;
   &:hover {
     transform: scale(1.05);
   }
@@ -47,11 +48,18 @@ export default {
   &--blue {
     // @apply bg-blue-700 text-white;
     background: var(--color-primary);
+
+    &:hover {
+      background: rgba(#3da9fc, .85);
+    }
   }
 
   &--red {
     background: var(--color-secondary);
     margin-left: 1.5rem;
+     &:hover {
+      background: rgba(#ef4565, .85);
+    }
   }
 }
 </style>

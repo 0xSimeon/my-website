@@ -4,9 +4,9 @@
     <app-darkmode></app-darkmode>
     <app-header></app-header>
     <app-hero></app-hero>
+    <app-about></app-about>
     <app-services></app-services>
     <app-projects></app-projects>
-    <app-about></app-about>
     <app-footer></app-footer>
   </div>
 </template>
@@ -36,24 +36,29 @@ export default {
 </script>
 
 <style lang="scss">
+html {
+  scroll-behavior: smooth;
+}
+// Scrollbar for Chrome, Edge and Safari
+::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+::-webkit-scrollbar-track {
+  background: var(--color-primary); /* color of the tracking area */
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid var(--color-primary-1); /* creates padding around scroll thumb */
+}
 
-
-// @media (prefers-color-scheme: dark) {
-//   body {
-//     background-color: black;
-//     color: blue;
-//   }
-// }
-// @media (prefers-color-scheme: light) {
-//   body {
-//     background-color: white;
-//     color: blue;
-//   }
-// }
-
+// for Firefox
 body {
+  scrollbar-width: thin; /* "auto" or "thin"  */
+  scrollbar-color: var(--color-secondary) var(--color-primary);
   background: var(--bg);
   color: var(--color-text);
-  position: relative;
+  position: relative; /* scroll thumb & track */
 }
+
 </style>

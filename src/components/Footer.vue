@@ -19,13 +19,34 @@
         classes="mx-auto w-2/5 sm:w-4/5 flex justify-center my-4"
       ></app-button>
     </div>
+    <div class="justify-center flex p-5">
+      <a
+        :href="link.url"
+        class="my-3 mx-3 font-semibold font-headingFont text-2xl footer__link "
+        target="_blank"
+        rel="noopener"
+        v-for="(link, index) in links"
+        :key="index"
+        :class="[link.text === 'resume' ? 'footer__resume' : '']"
+        >{{ link.text | capitalize }}</a
+      >
+      <!-- <a
+        href="https://github.com/simeon4real"
+        class="my-3 mx-3  font-semibold font-headingFont text-2xl footer__link "
+        >Github</a
+      > -->
+    </div>
     <div class="footer__details rounded">
       <p class="footer__text font-textFont text-2xl font-normal sm:text-lg">
-        Copyright &copy; {{ getYear }}.
+        Simeon Udoh &bull; &copy; {{ getYear }}.
       </p>
       <p class="footer__text font-textFont font-normal text-2xl sm:text-lg">
-       Made with <i class="fas fa-heart footer__heart pulse"></i> &nbsp; & Developed by
-        <span class="footer__text-bg  px-3 text-2xl sm:text-xl font-textFont rounded font-bold">Simeon Udoh</span>
+        Made with <i class="fas fa-heart footer__heart pulse"></i> &nbsp; &
+        Developed by
+        <span
+          class="footer__text-bg  px-3 text-2xl sm:text-xl font-textFont rounded font-bold"
+          >Simeon Udoh</span
+        >
       </p>
     </div>
   </footer>
@@ -34,6 +55,22 @@
 <script>
 import Button from '@/components/Button.vue';
 export default {
+  data() {
+    return {
+      links: [
+        {
+          url: 'https://drive.google.com/file/d/17RyJB5HIoW1qyY5Cu7N_HFH30XtFQ6GU/view?usp=sharing',
+          text: 'resume'
+        },
+
+        {
+          url: 'https://github.com/simeon4real',
+          text: 'github'
+        }
+
+      ]
+    }
+  },
   computed: {
     getYear() {
       return new Date().getFullYear();
@@ -74,7 +111,6 @@ export default {
       flex-direction: column;
       justify-content: center;
     }
-
   }
 
   &__text {
@@ -102,6 +138,42 @@ export default {
 
     @include respond(phone) {
       font-size: 1.5rem;
+    }
+  }
+
+  &__link {
+    color: var(--color-text);
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+      color: var(--resume);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      left: -0.25em;
+      right: -0.25em;
+      background-color: var(--color-primary);
+      transform-origin: bottom center;
+      transform: scaleY(0.1);
+      transition: all 0.1s ease-in-out;
+    }
+
+    &:hover::before {
+      transform: scaleY(1);
+      background-color: var(--color-primary);
+    }
+  }
+
+  &__resume {
+    &::after {
+      content: ' (PDF)';
+      font-size: .8rem; 
     }
   }
 }

@@ -14,23 +14,29 @@
         class=" project__card border shadow-lg rounded"
       >
         <div class="project__card-test border  rounded shadow-lg flex flex-col items-stretch">
-          <img
-            :src="require(`../assets/img/${project.imgUrl}`)"
-            alt=""
-            class="project__img rounded"
-          />
+
           <h4
             class="project__title font-bold headingFont text-3xl sm:text-2xl p-2"
           >
             {{ project.title }}
           </h4>
-          <p class="p-2 project__text textFont text-xl sm:text-lg ">
-            {{ project.description }}
-          </p>
+           <hr>
           <p class="p-2 textFont text-xl sm:text-base">
             <strong>{{ toolsTitle }}</strong
             >{{ project.tools | capitalize }}
           </p>
+
+
+
+          <p class="p-2 project__text textFont text-xl sm:text-lg ">
+            {{ project.description }}
+          </p>
+
+          <img
+            :src="require(`../assets/img/${project.imgUrl}`)"
+            alt=""
+            class="project__img rounded"
+          />
           <div class="flex mt-4 justify-between">
             <div>
               <p class="textFont font-bold text-xl sm:text-lg">Code</p>
@@ -128,20 +134,14 @@ export default {
       ]
     };
   },
-  filters: {
-    capitalize(value) {
-      return value
-        .split(' ')
-        .map(el => `${el.toUpperCase()}`)
-        .join(' ');
-    }
-  }
+
 };
 </script>
 
 <style lang="scss" scoped>
 .project {
   color: var(--color-text);
+  background: var(--color-tertiary);
   &__heading {
     @include dots;
   }
@@ -244,6 +244,10 @@ export default {
       width: 2rem;
       height: 2rem;
       fill: var(--color-text);
+
+      &:hover {
+        fill: var(--color-primary);
+      }
 
       @include respond(phone) {
         width: 1.8rem;

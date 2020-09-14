@@ -21,21 +21,23 @@ body {
   --color-social: var(--color-primary);
   --color-nav: var(--bg);
   --navLinkHover: var(--color-primary);
+  --resume: var(--color-text);
 
-  transition: all .32s;
+  transition: all 0.32s;
 }
 
 body.dark {
   --color-primary: #12334c;
   --color-primary-1: #90b4ce;
-  --bg: #03131F;
-  --color-secondary: #48151E;
-  --color-tertiary: #41474C;
+  --bg: #03131f;
+  --color-secondary: #48151e;
+  --color-tertiary: #41474c;
   // FONT COLORS
 
   --color-text: #fffffe;
+  --resume: var(--color-text);
+
   --color-menu: var(--color-text);
   --color-social: var(--color-text);
   --color-nav: var(--color-text);
-
 }
